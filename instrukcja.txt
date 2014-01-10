@@ -1,0 +1,17 @@
+Dodajemy nowy serwer:
+
+1. Implementacja:
+	- w src/servers stwórz nowy katalog dla servera (np. 'mcs')
+	- w katalogu umieść implementację i Makefile (radzę się wzorować na is)
+	- uaktualnij src/servers/Makefile (dodając również do 'image:')
+
+2. Dodawanie servera do obrazu systemu:
+	- w src/tools/Makefile dodaj do PROGRAMS ścieżkę do servera po 'rs' a przed 'tty'
+	- dodaj nowe makro w src/include/minix/com.h opisujące numer servera (np. MCS_PROC_NR ), numer powinien być o jeden większy od RS, pozostałe numery należy odpowienio przenumerować i uaktualnić NR_BOOT_PROCS, pamiętaj o zainstalowaniu zmienionego nagłówka
+	- dodaj server do tabeli inicjującej tabelę procesów jądra src/kernel/table.c (radzę się wzorować na rs ale zwiększyc kolejkę do 5)
+	- przebuduj obraz systemu ( w src/tools wywołaj 'make install')
+	- po reboocie proces servera powinien być działającym serwerem ('ps ax | grep mcs')
+
+3. Zmiana uprawnień tak aby procesy użytkownika mogły się komunikować z nowym serverem:
+	- uaktualnij wartość USR_M w pliku src/kernel/table.c
+	 

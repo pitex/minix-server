@@ -110,4 +110,6 @@ _PROTOTYPE( int get_stack_ptr, (int proc_nr, vir_bytes *sp)		);
 _PROTOTYPE( int get_mem_map, (int proc_nr, struct mem_map *mem_map)	);
 _PROTOTYPE( char *find_param, (const char *key));
 _PROTOTYPE( int proc_from_pid, (pid_t p));
+_PROTOTYPE(	int do_store, (void)	);
+_PROTOTYPE(	int do_retrieve, (void)	);
 

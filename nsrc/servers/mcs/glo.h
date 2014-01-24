@@ -1,8 +1,7 @@
 /* Global variables. */
 
-/* Parameters needed to keep diagnostics at IS. */
-#define DIAG_BUF_SIZE 1024
-extern char diag_buf[DIAG_BUF_SIZE];	/* buffer for messages */
+/* Parameters needed to keep diagnostics at MCS. */
+#define MUTEX_LIMIT 1024
 extern int diag_next;			/* next index to be written */
 extern int diag_size;			/* size of all messages */
 

@@ -1,4 +1,4 @@
-/* Header file for the system information server. 
+/* Header file for the mutex server. 
  *
  * Created:
  *    Jul 13, 2004	by Jorrit N. Herder 

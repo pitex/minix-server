@@ -1,4 +1,4 @@
-# Makefile for Information Server (IS)
+# Makefile for Mutex Server (MCS)
 SERVER = mcs
 
 # directories
@@ -17,7 +17,7 @@ CFLAGS = -I$i
 LDFLAGS = -i
 LIBS = -lsys -lsysutil 
 
-OBJ = mcs.o 
+OBJ = mcs.o
 
 # build local binary
 all build:	$(SERVER)
